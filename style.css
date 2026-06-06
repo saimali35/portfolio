@@ -1,1 +1,60 @@
+/* Remove default browser spacing and make sizing predictable */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+    --neon: #00ffe7;
+    --neon2: #bf00ff;
+    --neon3: #ff006e;
+    --bg: #050a0f;
+    --bg2: #0a1520;
+    --bg3: #0d1f2d;
+    --text: #c8e6f0;
+    --muted: #4a7a90;
+    --grid: rgba(0, 255, 231, 0.04);
+    --border: rgba(0, 255, 231, 0.15);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.03) 2px, rgba(0, 0, 0, 0.03) 4px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+}
