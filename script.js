@@ -42,7 +42,7 @@ try {
                 to_email: 'saideepmali162@gmail.com'
             };
 
-            emailjs.send('service_xatd198', 'template_4d84fqv', templateParams)
+           emailjs.send('service_mb52cil', 'template_4d84fqv', templateParams)
                 .then(function(response) {
                     formStatus.textContent = '✓ Message sent successfully!';
                     formStatus.style.color = 'var(--neon)';
