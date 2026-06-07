@@ -61,5 +61,20 @@ try {
     console.warn('EmailJS not available:', error);
 }
 
+// Back to Top Button
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
 
-
+// Show/Hide Back to Top Button on Scroll
+window.addEventListener('scroll', () => {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
+});

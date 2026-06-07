@@ -106,7 +106,8 @@ nav {
     color: var(--neon);
 }
 
-* Hamburger for mobile */ .hamburger {
+/* Hamburger for mobile */
+.hamburger {
     display: none;
     flex-direction: column;
     gap: 5px;
@@ -657,6 +658,30 @@ section {
     line-height: 1.6;
 }
 
+/* LANGUAGES */
+.lang-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.lang-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 8px 20px;
+    background: var(--bg2);
+}
+
+.lang-level {
+    font-size: 11px;
+    color: var(--muted);
+}
+
 /* CONTACT */
 .contact-wrap {
     border: 1px solid var(--border);
@@ -733,6 +758,28 @@ section {
 .contact-btn.secondary:hover {
     border-color: var(--neon);
     background: rgba(0, 255, 231, 0.07);
+}
+
+/* DIVIDER */
+.cyber-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), var(--neon), var(--border), transparent);
+    margin: 0 48px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 32px 48px;
+    border-top: 1px solid var(--border);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 2px;
+}
+
+footer span {
+    color: var(--neon);
 }
 
 /* ANIMATIONS */
@@ -869,6 +916,7 @@ section {
     margin-top: 12px;
     min-height: 20px;
 }
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     nav {
